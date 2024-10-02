@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #111;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+    display: flex;
+}
+.heart{
+    height: 70px;
+    width: 70px;
+    background-color:black;
+    transform:rotate(-45deg);
+    box-shadow: -10px 20px 90px red;
+    animation: heart 2s linear infinite ;
+    position: relative;
+    left: 26%;
+    z-index: 10;
+}
+.heart::before{
+    height: 70px;
+    width: 70px;
+    background-color:black;
+    top: -50%;
+    position: absolute;
+    border-radius: 50px;
+    content: "";
+}
+.heart::after{
+    height: 70px;
+    width: 70px;
+    background-color:black;
+    right: -50%;
+    position: absolute;
+    border-radius: 50px;
+    content: "";
+}
+@keyframes heart {
+    0%{
+        transform: rotate(-45deg) scale(1.09);
+    }
+    50%{
+
+    } 
+    80%{
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100%{
+        transform: rotate(-45deg) scale(1.02);
+
+    }
+    
+}
+.circle{
+    height: 300px;
+    width: 300px;
+    left: 14%;
+    border-radius: 50%;
+    animation: circle 2s linear infinite;
+    border: 2px solid rgb(185, 155, 212);
+    position: relative;
+    z-index: 5;
+}
+@keyframes circle {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360);
+        background-color: red;
+    }
+    
+}
+.square{
+    height: 500px;
+    width: 500px;
+    border-radius: 50;
+    animation: square 2s linear infinite;
+    border: 2px solid aqua;
+    background-color: blue;
+    position: relative;
+    right: 12%;
+    z-index: 1;
+
+}
+@keyframes square {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(260);
+}
+}
+@media (max-width:768px) {
+    .circle {
+        height: 212px;
+        width: 492px;
+        left: 30%;
+        border-radius: 50%;
+        animation: circle 2s linear infinite;
+        border: 2px solid blueviolet;
+        position: relative;
+        z-index: 5;
+    }
+    .heart{
+        .heart {
+            height: 37px;
+            width: 37px;
+            background-color: black;
+            transform: rotate(-45deg);
+            /* box-shadow: -10px 20px 90px red; */
+            animation: heart 2s linear infinite;
+            position: relative;
+            left: 51%;
+            z-index: 10;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+element.style {
+
+}
